@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SESI 6: Generic Dasar - Azriel Miracle Yuandre</title>
+  <title>SESI 6: Generic Dasar - Esti Anggraini</title>
   <style>
     * {
       margin: 0;
@@ -297,8 +297,8 @@
     <h1>📦 SESI 6: Generic Dasar</h1>
     <p class="subtitle">Type-Safe • Code Reusability • Compile-Time Checking</p>
     <div>
-      <span class="badge">Azriel Miracle Yuandre</span>
-      <span class="badge">251410024</span>
+      <span class="badge">Esti Anggraini</span>
+      <span class="badge">251410031</span>
       <span class="badge">SI2A</span>
     </div>
   </div>
@@ -348,8 +348,8 @@ class Failure extends Result {}
     <div class="card-body">
       <div class="code-title"><span class="tag">❌ Kode Bermasalah</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini
+// NIM: 251410031
 // KELAS: SI2A        
 class Box {
   dynamic data; // Bisa apa saja - TIDAK AMAN!
@@ -369,8 +369,8 @@ void main() {
         <p>  
         <strong>✅CONTOH BENAR</strong>
          <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini
+// NIM: 251410031
 // KELAS: SI2A  
 class Box<T> {
   T data;
@@ -411,8 +411,8 @@ void main() {
       </div>
       <div class="code-title"><span class="tag">✅ Contoh Benar</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini
+// NIM: 251410031
 // KELAS: SI2A         
 class MyClass&lt;T&gt; {
   T data;
@@ -449,8 +449,8 @@ void main() {
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Contoh Implementasi</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini 
+// NIM: 251410031
 // KELAS: SI2A         
 class Box&lt;T&gt; {
   T? _value;
@@ -500,9 +500,9 @@ var wrongBox = Box&lt;int&gt;("bukan angka");
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Contoh Benar</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A          
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A         
 class Pair&lt;K, V&gt; {
   K key;
   V value;
@@ -536,8 +536,8 @@ void main() {
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Contoh Benar</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini 
+// NIM: 251410031
 // KELAS: SI2A           
 String combine&lt;T, U&gt;(T value1, U value2) {
   return '$value1, $value2';
@@ -575,8 +575,8 @@ var result3 = combine&lt;int, String&gt;(10, 20);
       </div>
       <div class="code-title"><span class="tag">✅ Contoh Benar</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini 
+// NIM: 251410031
 // KELAS: SI2A          
 class NumberBox&lt;T extends num&gt; {
   T value;
@@ -615,9 +615,9 @@ var stringBox = NumberBox&lt;String&gt;("test");
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Contoh Benar</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A           
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A          
 T myFunc&lt;T&gt;(T value) => value;
 
 void main() {
@@ -644,8 +644,8 @@ void main() {
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Contoh Benar</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini 
+// NIM: 251410031
 // KELAS: SI2A           
 void printIterable<T extends Iterable<dynamic>>(T iterable) {
   for (var item in iterable) {
@@ -681,9 +681,9 @@ printIterable&lt;int&gt;(10);
     </div>
     <div class="card-body">
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A        
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A      
 
 // 1. Class Repository<T>
 class Repository<T> {
@@ -837,9 +837,9 @@ void main() {
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Implementasi Cache Generic</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A          
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A         
 class Cache<T> {
   final Map<String, T> _storage = {};
 
@@ -893,9 +893,9 @@ void main() {
       </div>
       <div class="code-title"><span class="tag">✅ Jawaban</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A           
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A         
 class Repository&lt;T&gt; {
   final Map&lt;int, T&gt; _data = {};
   int _nextId = 1;
@@ -934,9 +934,9 @@ void main() {
       </div>
       <div class="code-title"><span class="tag">✅ Jawaban</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A          
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A         
 void swap&lt;T&gt;(List&lt;T&gt; list, int i, int j) {
   if (i == j) return;
   T temp = list[i];
@@ -959,9 +959,9 @@ void main() {
       </div>
       <div class="code-title"><span class="tag">✅ Jawaban</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
-// KELAS: SI2A           
+// Nama: Esti Anggraini 
+// NIM: 251410031
+// KELAS: SI2A          
 class Triple&lt;A, B, C&gt; {
   A first;
   B second;
@@ -994,8 +994,8 @@ void main() {
     <div class="card-body">
       <div class="code-title"><span class="tag">✅ Solusi</span></div>
       <pre>
-// Nama: Azriel Miracle Yuandre
-// NIM: 251410024
+// Nama: Esti Anggraini 
+// NIM: 251410031
 // KELAS: SI2A           
 class Product {
   final int id;
@@ -1088,7 +1088,7 @@ void main() {
 
   <!-- FOOTER -->
   <div class="footer">
-    <p>© 2026 - Azriel Miracle Yuandre (251410024) | SI2A</p>
+    <p>© 2026 -Esti Anggraini (251410031) | SI2A</p>
     <p>Dart Generic - Type Safety & Code Reusability</p>
   </div>
 </div>
