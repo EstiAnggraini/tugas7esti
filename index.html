@@ -647,21 +647,25 @@ void main() {
 // Nama: Esti Anggraini 
 // NIM: 251410031
 // KELAS: SI2A           
-void printIterable<T extends Iterable<dynamic>>(T iterable) {
+
+void printIterable<T extends Iterable>(T iterable) {
   for (var item in iterable) {
     print(item);
   }
 }
 
 void main() {
-  printIterable<List<int>>([1, 2, 3]);
-  // Output: 1, 2, 3
+  printIterable([1, 2, 3]);
+  // Output: 1
+  //         2
+  //         3
 
-  printIterable<Set<String>>({'apple', 'banana'});
-  // Output: apple, banana
+  printIterable({'apple', 'banana'});
+  // Output: apple
+  //         banana
 }
       </pre>
- <img src="tugas712.png" alt="gambar" style="max-width:100%; margin-top:10px;">         
+ <img src="estidart12" alt="gambar" style="max-width:100%; margin-top:10px;">         
       <div class="code-title"><span class="tag tag-error">❌ Contoh ERROR</span></div>
       <pre>
 // ❌ ERROR: int bukan turunan dari Iterable
@@ -670,7 +674,7 @@ printIterable&lt;int&gt;(10);
 // ERROR: The type 'int' is not a subtype of 'Iterable&lt;dynamic&gt;'
 */
       </pre>
-<img src="tugas713.png" alt="gambar" style="max-width:100%; margin-top:10px;">    
+<img src="estidart13" alt="gambar" style="max-width:100%; margin-top:10px;">    
     </div>
   </div>
 
@@ -761,8 +765,8 @@ void main() {
   print('\n1. REPOSITORY<String>');
   print('-' * 40);
   var stringRepo = Repository<String>();
-  stringRepo.save('PRABOWO');
-  stringRepo.save('MULYONO');
+  stringRepo.save('BAM');
+  stringRepo.save('RICHARD');
   stringRepo.printAll();
 
   // Demo swap
@@ -776,11 +780,11 @@ void main() {
   // Demo Triple
   print('\n3. TRIPLE<A, B, C>');
   print('-' * 40);
-  var triple = Triple<String, int, bool>('PRABOWO', 25, true);
+  var triple = Triple<String, int, bool>('BAM', 25, true);
   triple.printTriple();
 }
       </pre>
-        <img src="tugas714.png" alt="gambar" style="max-width:100%; margin-top:10px;">
+        <img src="estidart14.png" alt="gambar" style="max-width:100%; margin-top:10px;">
           </p>
       </div>
     </div>
