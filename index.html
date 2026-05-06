@@ -881,7 +881,7 @@ void main() {
   print(productCache.get('p1'));
 }
       </pre>
-<img src="tugas715.png" alt="gambar" style="max-width:100%; margin-top:10px;">    
+<img src="estidart15.png" alt="gambar" style="max-width:100%; margin-top:10px;">    
     </div>
   </div>
 
@@ -900,20 +900,22 @@ void main() {
 // Nama: Esti Anggraini 
 // NIM: 251410031
 // KELAS: SI2A         
-class Repository&lt;T&gt; {
-  final Map&lt;int, T&gt; _data = {};
+
+class Repository<T> {
+  final Map<int, T> _data = {};
   int _nextId = 1;
 
-  void save(T item) {
+  int save(T item) {  // ✅ Perbaiki: tambahkan return type 'int'
     _data[_nextId++] = item;
     print('Saved: $item');
+    return _nextId - 1;  // ✅ Kembalikan ID yang baru disimpan
   }
 
   T? getById(int id) {
     return _data[id];
   }
 
-  List&lt;T&gt; getAll() {
+  List<T> getAll() {
     return _data.values.toList();
   }
 
@@ -923,14 +925,14 @@ class Repository&lt;T&gt; {
 }
 
 void main() {
-  var userRepo = Repository&lt;String&gt;();
-  userRepo.save("Alice");
-  userRepo.save("Bob");
+  var userRepo = Repository<String>();
+  userRepo.save("ANYA");
+  userRepo.save("RICHARD");
   print("User ID 1: ${userRepo.getById(1)}");
   print("All users: ${userRepo.getAll()}");
 }
       </pre>
-<img src="tugas716.png" alt="gambar" style="max-width:100%; margin-top:10px;"> 
+<img src="estidart16.png" alt="gambar" style="max-width:100%; margin-top:10px;"> 
       <hr>
 
       <div class="info-box">
@@ -941,8 +943,16 @@ void main() {
 // Nama: Esti Anggraini 
 // NIM: 251410031
 // KELAS: SI2A         
-void swap&lt;T&gt;(List&lt;T&gt; list, int i, int j) {
+
+void swap<T>(List<T> list, int i, int j) {
+  // ✅ Tambahkan validasi indeks
+  if (i < 0 || i >= list.length || j < 0 || j >= list.length) {
+    print('❌ Error: Indeks tidak valid!');
+    return;
+  }
+  
   if (i == j) return;
+  
   T temp = list[i];
   list[i] = list[j];
   list[j] = temp;
@@ -951,11 +961,11 @@ void swap&lt;T&gt;(List&lt;T&gt; list, int i, int j) {
 void main() {
   var numbers = [1, 2, 3, 4, 5];
   print("Before swap: $numbers");
-  swap&lt;int&gt;(numbers, 1, 3);
+  swap<int>(numbers, 1, 3);
   print("After swap: $numbers"); // Output: [1, 4, 3, 2, 5]
 }
       </pre>
-<img src="tugas717.png" alt="gambar" style="max-width:100%; margin-top:10px;">
+<img src="estidart17.png" alt="gambar" style="max-width:100%; margin-top:10px;">
       <hr>
 
       <div class="info-box">
@@ -979,14 +989,14 @@ class Triple&lt;A, B, C&gt; {
 }
 
 void main() {
-  var triple1 = Triple&lt;String, int, bool&gt;("Alice", 25, true);
+  var triple1 = Triple&lt;String, int, bool&gt;("NANA", 25, true);
   triple1.printTriple(); // Output: (Alice, 25, true)
 
   var triple2 = Triple&lt;int, double, String&gt;(1, 3.14, "Pi");
   triple2.printTriple(); // Output: (1, 3.14, Pi)
 }
       </pre>
-<img src="tugas718.png" alt="gambar" style="max-width:100%; margin-top:10px;">      
+<img src="estidart18.png" alt="gambar" style="max-width:100%; margin-top:10px;">      
     </div>
   </div>
 
@@ -1059,12 +1069,12 @@ void main() {
   print('Products: ${productRepo.readAll()}');
 
   var userRepo = GenericRepository&lt;User&gt;();
-  userRepo.create(User(1, 'PRABOWO'));
-  userRepo.create(User(2, 'GIBRAN'));
+  userRepo.create(User(1, 'NINI'));
+  userRepo.create(User(2, 'NANA'));
   print('Users: ${userRepo.readAll()}');
 }
       </pre>
-<img src="tugas719p.png" alt="gambar" style="max-width:100%; margin-top:10px;">      
+<img src="estidart19.png" alt="gambar" style="max-width:100%; margin-top:10px;">      
     </div>
   </div>
 
